@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>ScottYYC的个人博客</title>
+  <title>ScottYYC&#39;s Blog</title>
   <subtitle>Life is short.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-27T07:38:34.048Z</updated>
+  <updated>2017-08-29T05:15:36.661Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>标签测试文章</title>
+    <link href="http://yoursite.com/2017/08/29/%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+    <id>http://yoursite.com/2017/08/29/标签测试文章/</id>
+    <published>2017-08-29T03:14:01.000Z</published>
+    <updated>2017-08-29T05:15:36.661Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是一篇用来测试标签的文章。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是一篇用来测试标签的文章。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="Testing" scheme="http://yoursite.com/tags/Testing/"/>
+    
+      <category term="Another Tag" scheme="http://yoursite.com/tags/Another-Tag/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
