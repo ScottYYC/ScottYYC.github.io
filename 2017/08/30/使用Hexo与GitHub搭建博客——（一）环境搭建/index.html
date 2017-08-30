@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo,NexT,博客," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ScottYYC's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="(该系列博文收录在本博客的“分类”—“博客”一栏中，如需查看该系列其他博文，请跳转至“博客”分类。）     &amp;emsp;&amp;emsp;   前言 本人所使用的操作系统：Windows 10 专业版，64 位操作系统，因此只能以Windows操作系统为例，请谅解。在阅读完此篇文章后你应该做到：  下载并安装好所必须的软件 了解什么是命令行以及命令行基本操作 做好相关软件的环境配置  &amp;emsp;&amp;e">
+<meta name="keywords" content="Hexo,NexT,博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Hexo与GitHub搭建博客——（一）环境搭建">
+<meta property="og:url" content="https://scottyyc.github.io/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/index.html">
+<meta property="og:site_name" content="ScottYYC&#39;s Blog">
+<meta property="og:description" content="(该系列博文收录在本博客的“分类”—“博客”一栏中，如需查看该系列其他博文，请跳转至“博客”分类。）     &amp;emsp;&amp;emsp;   前言 本人所使用的操作系统：Windows 10 专业版，64 位操作系统，因此只能以Windows操作系统为例，请谅解。在阅读完此篇文章后你应该做到：  下载并安装好所必须的软件 了解什么是命令行以及命令行基本操作 做好相关软件的环境配置  &amp;emsp;&amp;e">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img3.doubanio.com/view/photo/l/public/p2497758714.webp">
+<meta property="og:image" content="https://img1.doubanio.com/view/photo/l/public/p2497760307.webp">
+<meta property="og:image" content="https://img1.doubanio.com/view/photo/l/public/p2497765687.webp">
+<meta property="og:image" content="https://img3.doubanio.com/view/photo/l/public/p2497766223.webp">
+<meta property="og:image" content="https://img3.doubanio.com/view/photo/l/public/p2497768220.webp">
+<meta property="og:image" content="https://img3.doubanio.com/view/photo/l/public/p2497768443.webp">
+<meta property="og:image" content="https://img1.doubanio.com/view/photo/l/public/p2497770439.webp">
+<meta property="og:image" content="https://img1.doubanio.com/view/photo/l/public/p2497770887.webp">
+<meta property="og:image" content="https://img3.doubanio.com/view/photo/l/public/p2497771615.webp">
+<meta property="og:image" content="https://img3.doubanio.com/view/photo/l/public/p2497772103.webp">
+<meta property="og:image" content="https://img3.doubanio.com/view/photo/l/public/p2497773786.webp">
+<meta property="og:updated_time" content="2017-08-30T16:01:32.812Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用Hexo与GitHub搭建博客——（一）环境搭建">
+<meta name="twitter:description" content="(该系列博文收录在本博客的“分类”—“博客”一栏中，如需查看该系列其他博文，请跳转至“博客”分类。）     &amp;emsp;&amp;emsp;   前言 本人所使用的操作系统：Windows 10 专业版，64 位操作系统，因此只能以Windows操作系统为例，请谅解。在阅读完此篇文章后你应该做到：  下载并安装好所必须的软件 了解什么是命令行以及命令行基本操作 做好相关软件的环境配置  &amp;emsp;&amp;e">
+<meta name="twitter:image" content="https://img3.doubanio.com/view/photo/l/public/p2497758714.webp">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'YZSRY5PVZH',
+      apiKey: 'cbf46740524d47307f922a0a6aab0531',
+      indexName: 'scottblog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"输入要搜索的内容","hits_empty":"没有找到与${query}相关的内容","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://scottyyc.github.io/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/"/>
+
+
+
+
+
+  <title>使用Hexo与GitHub搭建博客——（一）环境搭建 | ScottYYC's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?82c2640a1a05314ea1d4f038e314d833";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ScottYYC's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Life is short.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://scottyyc.github.io/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ScottYYC">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://img3.doubanio.com/view/photo/l/public/p2192311206.webp">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ScottYYC's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">使用Hexo与GitHub搭建博客——（一）环境搭建</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-30T18:54:44+08:00">
+                2017-08-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/博客/" itemprop="url" rel="index">
+                    <span itemprop="name">博客</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  1,679 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长约</span>
+                
+                <span title="阅读时长约">
+                  6 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>(该系列博文收录在本博客的“分类”—“博客”一栏中，如需查看该系列其他博文，请跳转至<a href="https://scottyyc.github.io/categories/%E5%8D%9A%E5%AE%A2/">“博客”</a>分类。）  </p>
+<p>  &emsp;&emsp;  </p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
+<p>本人所使用的操作系统：Windows 10 专业版，64 位操作系统，因此只能以Windows操作系统为例，请谅解。<br>在阅读完此篇文章后你应该做到：</p>
+<ul>
+<li><strong>下载并安装好所必须的软件</strong></li>
+<li><strong>了解什么是命令行以及命令行基本操作</strong></li>
+<li><strong>做好相关软件的环境配置</strong></li>
+</ul>
+<p>&emsp;&emsp;有朋友可能会说上面所提的这些东西以前从来没有接触过，完全看不懂。<br>&emsp;&emsp;没有关系，在接触Hexo之前我也对此一窍不通，但稍微钻研一会儿就发现，使用Hexo搭建博客真的可以说是“傻瓜式”的操作。请耐心往下看，然后跟着文章写作顺序一步步操作就行啦。</p>
+<p>P.s.：收到同学的反馈说前一篇文章看不懂，其实这是正常的。因为前一篇文章中涉及一些专业词汇，并且加入了一些我自己对于用Hexo与GitHub搭建博客的想法，对于从未接触过这方面知识的朋友来说这些内容可能有些难以理解。因此，我想在这里强调总结一下，前一篇文章的重点在于讲述了本系列博文的主体脉络，以及选择Hexo+GitHub搭建方法的理由，与实际操作并无直接联系。所以请大家放心大胆地往下看吧。</p>
+<p>&emsp;&emsp;[注]：如果在阅读过程中发现文章有任何错误或遗漏，欢迎在文章下的评论区指正与补充٩(๑❛ᴗ❛๑)۶。<br><br></p>
+<h2 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h2><hr>
+<ul>
+<li><strong>Node.js（必需）</strong></li>
+<li><strong>Git（必需）</strong></li>
+<li><strong>Notepad++（必需）</strong></li>
+<li><strong>Chrome谷歌浏览器（非必需）</strong></li>
+</ul>
+<p>&emsp;&emsp;有的朋友看到要安装这么多软件立马头就大了，立即推：放弃搭建博客（借用一下宇哥的梗hhh）。其实Notepad++也并非必需，但是为了接下来的工作中查阅修改配置文档更加方便，这里还是将其写为了必须安装。</p>
+<h3 id="Node-js的下载与安装"><a href="#Node-js的下载与安装" class="headerlink" title="Node.js的下载与安装"></a>Node.js的下载与安装</h3><ol>
+<li>第一步，进入Node.js的下载页面：<a href="https://nodejs.org/en/download/" title="Download|Node.js" target="_blank" rel="external">Download|Node.js</a></li>
+<li>第二步，选择与你个人计算机系统相符的版本进行下载，如：我是Windows 10，64 位操作系统的即选择<code>Windows Installer(.msi) — 64-bit</code>，如图中红圈处所示。若是32位操作系统请选择32-bit。<a href="http://jingyan.baidu.com/article/09ea3edec9caa4c0aede392e.html" title="（怎么看自己电脑是32位还是64位？）" target="_blank" rel="external">（怎么看自己电脑是32位还是64位？）</a><br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497758714.webp" alt="Node.js下载页面" title="Node.js下载页面"></li>
+<li>说明：（1）<code>Windows Installer</code> 指的是安装版的软件包，<code>Windows Binary</code> 指的是解压版的软件包，这里我们选择安装版的即可；（2）如果在下载过程中遇到下载速度极慢的问题，请在下图中的位置点击鼠标右键，选择复制链接地址，然后打开迅雷，新建任务，将复制的链接粘贴到其中即可。<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497760307.webp" alt="Nodejs2" title="Nodejs下载速度过慢"></li>
+<li>安装。这一步没什么好说的，双击打开下载好的安装包，一路<code>Next</code>点过去就行了。</li>
+</ol>
+<h3 id="Git的下载与安装"><a href="#Git的下载与安装" class="headerlink" title="Git的下载与安装"></a>Git的下载与安装</h3><ol>
+<li><p>进入Git下载页面：<a href="https://git-scm.com/download/win" title="Git - Downloading Package" target="_blank" rel="external">Git - Downloading Package</a><br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497765687.webp" alt="Git下载页面" title="Git下载页面"></p>
+</li>
+<li><p>选择相应的版本进行下载。如果下载速度慢，在相应版本链接处点击鼠标右键，复制链接地址，进入迅雷新建任务进行下载。</p>
+</li>
+<li>双击打开安装包进行安装。安装完成后，在开始菜单里找到“Git”-&gt;“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功。关闭窗口即可。<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497766223.webp" alt="Git Bash界面" title="Git Bash界面"></li>
+</ol>
+<h3 id="Notepad-的下载与安装"><a href="#Notepad-的下载与安装" class="headerlink" title="Notepad++的下载与安装"></a>Notepad++的下载与安装</h3><ol>
+<li>百度搜索Notepad++，直接选择搜索结果中百度软件中心的资源下载即可。或直接点击此链接：<a href="https://www.baidu.com/link?url=_C9n2XybYmib1dv6fcJVSK6VJwKrqKlth9Irz07WbQNDvTbsp5pw3ozISmijw69FG-sl5FF1kgDm9dshZD5TV_x-JO2AT9angdd4DnepY1i&amp;wd=&amp;eqid=ff498e1d0000d4f50000000459a6ccab" title="百度软件中心|Notepad++下载" target="_blank" rel="external">百度软件中心|Notepad++下载</a>（认为链接不安全的朋友请自行搜索）</li>
+<li>双击打开安装包进行安装，需要注意的一点是安装过程中选择“语言”-&gt;“简体中文”。</li>
+</ol>
+<h2 id="命令行与软件环境配置"><a href="#命令行与软件环境配置" class="headerlink" title="命令行与软件环境配置"></a>命令行与软件环境配置</h2><hr>
+<h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>&emsp;&emsp;同时按住键盘的<code>win</code>键与<code>R</code>键，打开“运行”命令框。然后输入<code>cmd</code>，点击“确定”打开命令行（命令提示符），也就是我们平时所说的“黑框框”。<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497768220.webp" alt="win+R打开运行框" title="win+R打开运行框"><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497768443.webp" alt="cmd命令提示符" title="cmd命令提示符"></p>
+<h3 id="软件环境配置"><a href="#软件环境配置" class="headerlink" title="软件环境配置"></a>软件环境配置</h3><h4 id="Node-js环境变量设置"><a href="#Node-js环境变量设置" class="headerlink" title="Node.js环境变量设置"></a>Node.js环境变量设置</h4><p>&emsp;&emsp;<code>win + R</code>键打开命令行工具，输入<code>npm</code>，并按“回车”键，如果命令行中显示类似如下结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">Usage: npm &lt;command&gt;</div><div class="line"></div><div class="line">where &lt;command&gt; is one of:</div><div class="line">    access, adduser, bin, bugs, c, cache, completion, config,</div><div class="line">    ddp, dedupe, deprecate, dist-tag, docs, edit, explore, get,</div><div class="line">    help, help-search, i, init, install, install-test, it, link,</div><div class="line">    list, ln, login, logout, ls, outdated, owner, pack, ping,</div><div class="line">    prefix, prune, publish, rb, rebuild, repo, restart, root,</div><div class="line">    run, run-script, s, se, search, set, shrinkwrap, star,</div><div class="line">    stars, start, stop, t, tag, team, test, tst, un, uninstall,</div><div class="line">    unpublish, unstar, up, update, v, version, view, whoami</div><div class="line"></div><div class="line">npm &lt;cmd&gt; -h     quick help on &lt;cmd&gt;</div><div class="line">npm -l           display full usage info</div><div class="line">npm help &lt;term&gt;  search for help on &lt;term&gt;</div><div class="line">npm help npm     involved overview</div><div class="line"></div><div class="line">Specify configs in the ini-formatted file:</div><div class="line">    C:\Users\lenovo\.npmrc</div><div class="line">or on the command line via: npm &lt;command&gt; --key value</div><div class="line">Config info can be viewed via: npm help config</div><div class="line"></div><div class="line">npm@3.10.10 C:\Program Files\nodejs\node_modules\npm</div></pre></td></tr></table></figure></p>
+<p>说明Node.js已配置好，无需再调整。</p>
+<p>如果命令行中显示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;npm&apos; 不是内部或外部命令，也不是可运行的程序</div><div class="line">或批处理文件。</div></pre></td></tr></table></figure></p>
+<p>请做如下操作：</p>
+<ul>
+<li>在你的计算机中找到Node.js的安装路径并复制，如下图：<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497770439.webp" alt="Nodejs环境变量设置1" title="Nodejs环境变量设置1"></li>
+<li>在桌面使用鼠标右键点击“我的电脑”-&gt;“属性”-&gt;“高级系统设置”：<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497770887.webp" alt="Nodejs环境变量设置2" title="Nodejs环境变量设置2"></li>
+<li>点击“环境变量”-&gt; 找到系统变量中的<code>Path</code>字段 -&gt; 点击“编辑”：<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497771615.webp" alt="Nodejs环境变量设置3" title="Nodejs环境变量设置3"></li>
+<li>将之前复制的Node.js的安装路径粘贴到“变量值”最后，点击“确定”：<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497772103.webp" alt="Nodejs环境变量设置4" title="Nodejs环境变量设置4"></li>
+</ul>
+<p>至此Node.js环境变量配置完成，再次打开命令行工具，输入<code>npm</code>，可看到：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Usage: npm &lt;command&gt;</div><div class="line"></div><div class="line">where &lt;command&gt; is one of:</div><div class="line">.......（下方内容省略）</div></pre></td></tr></table></figure>
+<h4 id="Node-js之npm淘宝镜像源设置"><a href="#Node-js之npm淘宝镜像源设置" class="headerlink" title="Node.js之npm淘宝镜像源设置"></a>Node.js之npm淘宝镜像源设置</h4><p>&emsp;&emsp;简单解释一下这步操作的意义：Node.js默认配置使用的是国外的源，在使用<code>npm</code>命令安装相关的库时速度会比较慢，配置国内镜像能够提升库的安装速度。（还是那句话，如果不理解，请跟着做就行了。）<br>操作步骤：<code>win + R</code>打开命令行工具 -&gt; 输入<code>npm config set registry https://registry.npm.taobao.org</code>，按回车即可：<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497773786.webp" alt="npm淘宝镜像源设置" title="npm淘宝镜像源设置"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr>
+<p>&emsp;&emsp;操作完以上的步骤，相关软件的安装和配置基本上就可以说是完成了，是不是很简单呢？（现场的同学们都点头了，屏幕前的同学们，你们呢！）<br>&emsp;&emsp;下一篇文章将会介绍GitHub的相关配置、Hexo框架的安装以及Hexo的基本命令，经过下一篇的学习，朋友们就可以首次看到属于自己的博客了（个人博客一代目），敬请期待吧~</p>
+
+      
+    </div>
+    
+    
+    
+	
+	
+	<div>
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-smile-o"></i>感谢您的阅读-------------</div>
+    
+</div>
+	</div>
+	
+	
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文标题：</strong>
+    使用Hexo与GitHub搭建博客——（一）环境搭建
+  </li>
+  
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    ScottYYC
+  </li>
+  
+  <li class="post-copyright-author">
+    <strong>发布时间：</strong>
+    2017年08月30日 - 18:08
+  </li>
+  
+  <li class="post-copyright-link">
+    <strong>原始链接：</strong>
+    <a href="https://scottyyc.github.io/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/" title="使用Hexo与GitHub搭建博客——（一）环境搭建">https://scottyyc.github.io/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/</a>
+  </li>
+  
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+          
+            <a href="/tags/NexT/" rel="tag"><i class="fa fa-tag"></i> NexT</a>
+          
+            <a href="/tags/博客/" rel="tag"><i class="fa fa-tag"></i> 博客</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/30/使用Hexo与GitHub搭建博客——（零）说在前面/" rel="next" title="使用Hexo与GitHub搭建博客——（零）写在前面">
+                <i class="fa fa-chevron-left"></i> 使用Hexo与GitHub搭建博客——（零）写在前面
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDUyOS83MDg0"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://img3.doubanio.com/view/photo/l/public/p2192311206.webp"
+               alt="ScottYYC" />
+          <p class="site-author-name" itemprop="name">ScottYYC</p>
+           
+              <p class="site-description motion-element" itemprop="description">陌生的城市啊，熟悉的娇萝莉</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ScottYYC" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+<!--网易云音乐外链播放器-->
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=34509412&auto=0&height=66"></iframe>
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件下载"><span class="nav-number">2.</span> <span class="nav-text">软件下载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js的下载与安装"><span class="nav-number">2.1.</span> <span class="nav-text">Node.js的下载与安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git的下载与安装"><span class="nav-number">2.2.</span> <span class="nav-text">Git的下载与安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notepad-的下载与安装"><span class="nav-number">2.3.</span> <span class="nav-text">Notepad++的下载与安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行与软件环境配置"><span class="nav-number">3.</span> <span class="nav-text">命令行与软件环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行"><span class="nav-number">3.1.</span> <span class="nav-text">命令行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件环境配置"><span class="nav-number">3.2.</span> <span class="nav-text">软件环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Node-js环境变量设置"><span class="nav-number">3.2.1.</span> <span class="nav-text">Node.js环境变量设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Node-js之npm淘宝镜像源设置"><span class="nav-number">3.2.2.</span> <span class="nav-text">Node.js之npm淘宝镜像源设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-github"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"><a href="https://github.com/ScottYYC">ScottYYC</a></span>
+</div>
+
+
+<div class="powered-by">
+  撸python，撸吉他
+</div>
+
+<div class="theme-info">
+  Blog -
+  Welcome to Scott's Blog
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
