@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://scottyyc.github.io/"/>
-  <updated>2017-08-30T16:01:32.812Z</updated>
+  <updated>2017-08-31T16:09:07.131Z</updated>
   <id>https://scottyyc.github.io/</id>
   
   <author>
@@ -16,18 +16,78 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub</title>
+    <link href="https://scottyyc.github.io/2017/08/31/%E4%BD%BF%E7%94%A8Hexo%E4%B8%8EGitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%EF%BC%88%E4%BA%8C%EF%BC%89%E5%AE%89%E8%A3%85Hexo%E4%B8%8E%E9%85%8D%E7%BD%AEGitHub/"/>
+    <id>https://scottyyc.github.io/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/</id>
+    <published>2017-08-31T12:45:40.000Z</published>
+    <updated>2017-08-31T16:09:07.131Z</updated>
+    
+    <content type="html"><![CDATA[<p>(该系列博文收录在本博客的“分类”—“博客”一栏中，如需查看该系列其他博文，请跳转至<a href="https://scottyyc.github.io/categories/%E5%8D%9A%E5%AE%A2/">“博客”</a>分类。）  </p>
+<p>  &emsp;&emsp;  </p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
+<p>前一篇文章介绍了相关软件的安装（Node.js，Git与Notepad++），也对软件的配置进行了说明。本篇文章是在做好前一篇文章相关准备的基础上进行的，如果还未做好相关准备，请查阅前一篇文章。</p>
+<p>阅读完此篇文章后你应该做好以下工作：</p>
+<ul>
+<li><strong>配置好GitHub</strong></li>
+<li><strong>安装好Hexo框架</strong></li>
+<li><strong>掌握Hexo的基本命令</strong></li>
+</ul>
+<p>&emsp;&emsp;[注]：如果在阅读过程中发现文章有任何错误或遗漏，欢迎在文章下的评论区指正与补充٩(๑❛ᴗ❛๑)۶。<br><br></p>
+<h2 id="配置GitHub"><a href="#配置GitHub" class="headerlink" title="配置GitHub"></a>配置GitHub</h2><hr>
+<h3 id="账号注册与项目创建"><a href="#账号注册与项目创建" class="headerlink" title="账号注册与项目创建"></a>账号注册与项目创建</h3><ol>
+<li>登入GitHub注册页面：<a href="https://github.com/join?source=header" title="GitHub | 注册" target="_blank" rel="external">GitHub | 注册</a></li>
+<li>填写注册信息：（1）第一个条形框内填入用户名，并记下你的用户名（建议只使用小写字母与数字的组合）；（2）第二个条形框内填入常用邮箱（会用于注册验证与之后的操作，请勿随意填写，尽量保证与上一篇中配置Git时的邮箱相同）；（3）第三个条形框内填写密码。<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497853328.webp" alt="GitHub注册1" title="GitHub注册1"></li>
+<li>全部填写完成后点击下方绿色按钮“Create an account”，跳转到如下页面：<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497853908.webp" alt="GitHub注册2" title="GitHub注册2"><br>&emsp;&emsp;直接点击绿色按钮“Continue”，并打开你注册时所填写的邮箱，在刚收到的 GitHub 邮件中点击“Verify email address”。<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497854437.webp" alt="GitHub邮件认证" title="GitHub邮件认证"></li>
+<li>跳转到如下页面，点击“Start a project”。<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497855333.webp" alt="GitHub页面" title="GitHub页面"></li>
+<li>转到如下页面：<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497856550.webp" alt="GitHub项目页面" title="GitHub项目页面"><br>&emsp;&emsp;在图中红框位置输入<code>username.github.io</code>（其中“username”请改成你注册时所填的用户名，例如：我的用户名是scottshufe，便在红框内填入<code>scottshufe.github.io</code>），然后点击下方绿色按钮“Create repository”。成功后跳转到如下页面：<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497857762.webp" alt="项目成功创建" title="项目成功创建"></li>
+</ol>
+<h3 id="SSH-Key的创建与配置"><a href="#SSH-Key的创建与配置" class="headerlink" title="SSH Key的创建与配置"></a>SSH Key的创建与配置</h3><ol>
+<li><p>打开命令行工具，输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;注册GitHub时所填写的邮箱&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p>然后一路回车，得到如下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Your public key has been saved in 路径/.ssh/id_rsa.pub.</div></pre></td></tr></table></figure>
+</li>
+<li><p>根据上方信息中的路径找到<code>id_rsa.pub</code> 文件，鼠标右键-&gt;“Edit with Notepad++”，打开并复制该文件中的全部内容（使用快捷键<code>Ctrl+A</code> -&gt; <code>Ctrl+C</code>，即可复制文件内所有内容），然后关闭。</p>
+</li>
+<li><p>为GitHub添加SSH Key。进入该网页：<a href="https://github.com/settings/keys" title="GitHub | Setting keys" target="_blank" rel="external">GitHub | Setting keys</a><br>点击右上角的绿色按钮“New SSH key”，填上任意“Title”，在“Key”文本框里粘贴上一步中复制的<code>id_rsa.pub</code>文件的内容，点击“Add SSH key”，在弹出页面中输入密码，完成。<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497867918.webp" alt="ssh验证" title="ssh验证"></p>
+</li>
+</ol>
+<p><br></p>
+<h2 id="Hexo的安装与基本命令"><a href="#Hexo的安装与基本命令" class="headerlink" title="Hexo的安装与基本命令"></a>Hexo的安装与基本命令</h2><hr>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;(该系列博文收录在本博客的“分类”—“博客”一栏中，如需查看该系列其他博文，请跳转至&lt;a href=&quot;https://scottyyc.github.io/categories/%E5%8D%9A%E5%AE%A2/&quot;&gt;“博客”&lt;/a&gt;分类。）  &lt;/p&gt;
+&lt;p&gt;  &amp;em
+    
+    </summary>
+    
+      <category term="博客" scheme="https://scottyyc.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo" scheme="https://scottyyc.github.io/tags/Hexo/"/>
+    
+      <category term="NexT" scheme="https://scottyyc.github.io/tags/NexT/"/>
+    
+      <category term="博客" scheme="https://scottyyc.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用Hexo与GitHub搭建博客——（一）环境搭建</title>
     <link href="https://scottyyc.github.io/2017/08/30/%E4%BD%BF%E7%94%A8Hexo%E4%B8%8EGitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%EF%BC%88%E4%B8%80%EF%BC%89%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     <id>https://scottyyc.github.io/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/</id>
     <published>2017-08-30T10:54:44.000Z</published>
-    <updated>2017-08-30T16:01:32.812Z</updated>
+    <updated>2017-08-31T16:07:02.541Z</updated>
     
     <content type="html"><![CDATA[<p>(该系列博文收录在本博客的“分类”—“博客”一栏中，如需查看该系列其他博文，请跳转至<a href="https://scottyyc.github.io/categories/%E5%8D%9A%E5%AE%A2/">“博客”</a>分类。）  </p>
 <p>  &emsp;&emsp;  </p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
 <p>本人所使用的操作系统：Windows 10 专业版，64 位操作系统，因此只能以Windows操作系统为例，请谅解。<br>在阅读完此篇文章后你应该做到：</p>
 <ul>
-<li><strong>下载并安装好所必须的软件</strong></li>
+<li><strong>下载并安装好所必需的软件</strong></li>
 <li><strong>了解什么是命令行以及命令行基本操作</strong></li>
 <li><strong>做好相关软件的环境配置</strong></li>
 </ul>
@@ -53,16 +113,21 @@
 </li>
 <li><p>选择相应的版本进行下载。如果下载速度慢，在相应版本链接处点击鼠标右键，复制链接地址，进入迅雷新建任务进行下载。</p>
 </li>
-<li>双击打开安装包进行安装。安装完成后，在开始菜单里找到“Git”-&gt;“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功。关闭窗口即可。<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497766223.webp" alt="Git Bash界面" title="Git Bash界面"></li>
+<li>双击打开安装包进行安装。安装完成后，在开始菜单里找到“Git”-&gt;“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功。</li>
+<li><p>在打开的 Git Bash 界面中输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;Your Name&quot;</div><div class="line">git config --global user.email &quot;email@example.com&quot;</div></pre></td></tr></table></figure>
+<p>其中的<code>Your Name</code>与<code>email@example.com</code>请分别替换成你想用的用户名与常用邮箱。设置完成后关闭窗口即可。<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497766223.webp" alt="Git Bash界面" title="Git Bash界面"></p>
+</li>
 </ol>
 <h3 id="Notepad-的下载与安装"><a href="#Notepad-的下载与安装" class="headerlink" title="Notepad++的下载与安装"></a>Notepad++的下载与安装</h3><ol>
 <li>百度搜索Notepad++，直接选择搜索结果中百度软件中心的资源下载即可。或直接点击此链接：<a href="https://www.baidu.com/link?url=_C9n2XybYmib1dv6fcJVSK6VJwKrqKlth9Irz07WbQNDvTbsp5pw3ozISmijw69FG-sl5FF1kgDm9dshZD5TV_x-JO2AT9angdd4DnepY1i&amp;wd=&amp;eqid=ff498e1d0000d4f50000000459a6ccab" title="百度软件中心|Notepad++下载" target="_blank" rel="external">百度软件中心|Notepad++下载</a>（认为链接不安全的朋友请自行搜索）</li>
 <li>双击打开安装包进行安装，需要注意的一点是安装过程中选择“语言”-&gt;“简体中文”。</li>
 </ol>
+<p><br></p>
 <h2 id="命令行与软件环境配置"><a href="#命令行与软件环境配置" class="headerlink" title="命令行与软件环境配置"></a>命令行与软件环境配置</h2><hr>
 <h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>&emsp;&emsp;同时按住键盘的<code>win</code>键与<code>R</code>键，打开“运行”命令框。然后输入<code>cmd</code>，点击“确定”打开命令行（命令提示符），也就是我们平时所说的“黑框框”。<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497768220.webp" alt="win+R打开运行框" title="win+R打开运行框"><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497768443.webp" alt="cmd命令提示符" title="cmd命令提示符"></p>
-<h3 id="软件环境配置"><a href="#软件环境配置" class="headerlink" title="软件环境配置"></a>软件环境配置</h3><h4 id="Node-js环境变量设置"><a href="#Node-js环境变量设置" class="headerlink" title="Node.js环境变量设置"></a>Node.js环境变量设置</h4><p>&emsp;&emsp;<code>win + R</code>键打开命令行工具，输入<code>npm</code>，并按“回车”键，如果命令行中显示类似如下结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">Usage: npm &lt;command&gt;</div><div class="line"></div><div class="line">where &lt;command&gt; is one of:</div><div class="line">    access, adduser, bin, bugs, c, cache, completion, config,</div><div class="line">    ddp, dedupe, deprecate, dist-tag, docs, edit, explore, get,</div><div class="line">    help, help-search, i, init, install, install-test, it, link,</div><div class="line">    list, ln, login, logout, ls, outdated, owner, pack, ping,</div><div class="line">    prefix, prune, publish, rb, rebuild, repo, restart, root,</div><div class="line">    run, run-script, s, se, search, set, shrinkwrap, star,</div><div class="line">    stars, start, stop, t, tag, team, test, tst, un, uninstall,</div><div class="line">    unpublish, unstar, up, update, v, version, view, whoami</div><div class="line"></div><div class="line">npm &lt;cmd&gt; -h     quick help on &lt;cmd&gt;</div><div class="line">npm -l           display full usage info</div><div class="line">npm help &lt;term&gt;  search for help on &lt;term&gt;</div><div class="line">npm help npm     involved overview</div><div class="line"></div><div class="line">Specify configs in the ini-formatted file:</div><div class="line">    C:\Users\lenovo\.npmrc</div><div class="line">or on the command line via: npm &lt;command&gt; --key value</div><div class="line">Config info can be viewed via: npm help config</div><div class="line"></div><div class="line">npm@3.10.10 C:\Program Files\nodejs\node_modules\npm</div></pre></td></tr></table></figure></p>
-<p>说明Node.js已配置好，无需再调整。</p>
+<h3 id="软件环境配置"><a href="#软件环境配置" class="headerlink" title="软件环境配置"></a>软件环境配置</h3><h4 id="Node-js环境变量设置"><a href="#Node-js环境变量设置" class="headerlink" title="Node.js环境变量设置"></a>Node.js环境变量设置</h4><p>&emsp;&emsp;<code>win + R</code>键并输入<code>cmd</code>，点击“确定”打开命令行工具，输入<code>npm</code>，并按“回车”键，如果命令行中显示类似如下结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">Usage: npm &lt;command&gt;</div><div class="line"></div><div class="line">where &lt;command&gt; is one of:</div><div class="line">    access, adduser, bin, bugs, c, cache, completion, config,</div><div class="line">    ddp, dedupe, deprecate, dist-tag, docs, edit, explore, get,</div><div class="line">    help, help-search, i, init, install, install-test, it, link,</div><div class="line">    list, ln, login, logout, ls, outdated, owner, pack, ping,</div><div class="line">    prefix, prune, publish, rb, rebuild, repo, restart, root,</div><div class="line">    run, run-script, s, se, search, set, shrinkwrap, star,</div><div class="line">    stars, start, stop, t, tag, team, test, tst, un, uninstall,</div><div class="line">    unpublish, unstar, up, update, v, version, view, whoami</div><div class="line"></div><div class="line">npm &lt;cmd&gt; -h     quick help on &lt;cmd&gt;</div><div class="line">npm -l           display full usage info</div><div class="line">npm help &lt;term&gt;  search for help on &lt;term&gt;</div><div class="line">npm help npm     involved overview</div><div class="line"></div><div class="line">Specify configs in the ini-formatted file:</div><div class="line">    C:\Users\lenovo\.npmrc</div><div class="line">or on the command line via: npm &lt;command&gt; --key value</div><div class="line">Config info can be viewed via: npm help config</div><div class="line"></div><div class="line">npm@3.10.10 C:\Program Files\nodejs\node_modules\npm</div></pre></td></tr></table></figure></p>
+<p>说明Node.js环境变量已配置好，无需再调整，可跳过下面这一步。</p>
 <p>如果命令行中显示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;npm&apos; 不是内部或外部命令，也不是可运行的程序</div><div class="line">或批处理文件。</div></pre></td></tr></table></figure></p>
 <p>请做如下操作：</p>
 <ul>
@@ -73,9 +138,9 @@
 </ul>
 <p>至此Node.js环境变量配置完成，再次打开命令行工具，输入<code>npm</code>，可看到：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Usage: npm &lt;command&gt;</div><div class="line"></div><div class="line">where &lt;command&gt; is one of:</div><div class="line">.......（下方内容省略）</div></pre></td></tr></table></figure>
-<h4 id="Node-js之npm淘宝镜像源设置"><a href="#Node-js之npm淘宝镜像源设置" class="headerlink" title="Node.js之npm淘宝镜像源设置"></a>Node.js之npm淘宝镜像源设置</h4><p>&emsp;&emsp;简单解释一下这步操作的意义：Node.js默认配置使用的是国外的源，在使用<code>npm</code>命令安装相关的库时速度会比较慢，配置国内镜像能够提升库的安装速度。（还是那句话，如果不理解，请跟着做就行了。）<br>操作步骤：<code>win + R</code>打开命令行工具 -&gt; 输入<code>npm config set registry https://registry.npm.taobao.org</code>，按回车即可：<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497773786.webp" alt="npm淘宝镜像源设置" title="npm淘宝镜像源设置"></p>
+<h4 id="Node-js配置之npm淘宝镜像源设置"><a href="#Node-js配置之npm淘宝镜像源设置" class="headerlink" title="Node.js配置之npm淘宝镜像源设置"></a>Node.js配置之npm淘宝镜像源设置</h4><p>&emsp;&emsp;简单解释一下这步操作的意义：Node.js默认配置使用的是国外的源，在使用<code>npm</code>命令安装相关的库时速度会比较慢，配置国内镜像能够提升库的安装速度。（还是那句话，如果不理解，请跟着做就行了。）<br>操作步骤：<code>win + R</code>输入<code>cmd</code>，点击“确定”打开命令行工具 -&gt; 输入<code>npm config set registry https://registry.npm.taobao.org</code>，按回车即可：<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497773786.webp" alt="npm淘宝镜像源设置" title="npm淘宝镜像源设置"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr>
-<p>&emsp;&emsp;操作完以上的步骤，相关软件的安装和配置基本上就可以说是完成了，是不是很简单呢？（现场的同学们都点头了，屏幕前的同学们，你们呢！）<br>&emsp;&emsp;下一篇文章将会介绍GitHub的相关配置、Hexo框架的安装以及Hexo的基本命令，经过下一篇的学习，朋友们就可以首次看到属于自己的博客了（个人博客一代目），敬请期待吧~</p>
+<p>&emsp;&emsp;操作完以上的步骤，相关软件的安装和配置基本上就可以说是完成了，是不是很简单呢？（现场的同学们都说是，屏幕前的同学们，你们呢！）<br>&emsp;&emsp;下一篇文章将会介绍GitHub的相关配置、Hexo框架的安装以及Hexo的基本命令，经过下一篇的学习，朋友们就可以首次看到属于自己的博客了（个人博客一代目），敬请期待吧~</p>
 ]]></content>
     
     <summary type="html">
