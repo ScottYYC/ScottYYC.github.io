@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://scottyyc.github.io/"/>
-  <updated>2017-08-31T16:07:02.541Z</updated>
+  <updated>2017-08-31T16:09:07.131Z</updated>
   <id>https://scottyyc.github.io/</id>
   
   <author>
@@ -14,6 +14,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub</title>
+    <link href="https://scottyyc.github.io/2017/08/31/%E4%BD%BF%E7%94%A8Hexo%E4%B8%8EGitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%EF%BC%88%E4%BA%8C%EF%BC%89%E5%AE%89%E8%A3%85Hexo%E4%B8%8E%E9%85%8D%E7%BD%AEGitHub/"/>
+    <id>https://scottyyc.github.io/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/</id>
+    <published>2017-08-31T12:45:40.000Z</published>
+    <updated>2017-08-31T16:09:07.131Z</updated>
+    
+    <content type="html"><![CDATA[<p>(该系列博文收录在本博客的“分类”—“博客”一栏中，如需查看该系列其他博文，请跳转至<a href="https://scottyyc.github.io/categories/%E5%8D%9A%E5%AE%A2/">“博客”</a>分类。）  </p>
+<p>  &emsp;&emsp;  </p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
+<p>前一篇文章介绍了相关软件的安装（Node.js，Git与Notepad++），也对软件的配置进行了说明。本篇文章是在做好前一篇文章相关准备的基础上进行的，如果还未做好相关准备，请查阅前一篇文章。</p>
+<p>阅读完此篇文章后你应该做好以下工作：</p>
+<ul>
+<li><strong>配置好GitHub</strong></li>
+<li><strong>安装好Hexo框架</strong></li>
+<li><strong>掌握Hexo的基本命令</strong></li>
+</ul>
+<p>&emsp;&emsp;[注]：如果在阅读过程中发现文章有任何错误或遗漏，欢迎在文章下的评论区指正与补充٩(๑❛ᴗ❛๑)۶。<br><br></p>
+<h2 id="配置GitHub"><a href="#配置GitHub" class="headerlink" title="配置GitHub"></a>配置GitHub</h2><hr>
+<h3 id="账号注册与项目创建"><a href="#账号注册与项目创建" class="headerlink" title="账号注册与项目创建"></a>账号注册与项目创建</h3><ol>
+<li>登入GitHub注册页面：<a href="https://github.com/join?source=header" title="GitHub | 注册" target="_blank" rel="external">GitHub | 注册</a></li>
+<li>填写注册信息：（1）第一个条形框内填入用户名，并记下你的用户名（建议只使用小写字母与数字的组合）；（2）第二个条形框内填入常用邮箱（会用于注册验证与之后的操作，请勿随意填写，尽量保证与上一篇中配置Git时的邮箱相同）；（3）第三个条形框内填写密码。<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497853328.webp" alt="GitHub注册1" title="GitHub注册1"></li>
+<li>全部填写完成后点击下方绿色按钮“Create an account”，跳转到如下页面：<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497853908.webp" alt="GitHub注册2" title="GitHub注册2"><br>&emsp;&emsp;直接点击绿色按钮“Continue”，并打开你注册时所填写的邮箱，在刚收到的 GitHub 邮件中点击“Verify email address”。<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497854437.webp" alt="GitHub邮件认证" title="GitHub邮件认证"></li>
+<li>跳转到如下页面，点击“Start a project”。<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497855333.webp" alt="GitHub页面" title="GitHub页面"></li>
+<li>转到如下页面：<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497856550.webp" alt="GitHub项目页面" title="GitHub项目页面"><br>&emsp;&emsp;在图中红框位置输入<code>username.github.io</code>（其中“username”请改成你注册时所填的用户名，例如：我的用户名是scottshufe，便在红框内填入<code>scottshufe.github.io</code>），然后点击下方绿色按钮“Create repository”。成功后跳转到如下页面：<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497857762.webp" alt="项目成功创建" title="项目成功创建"></li>
+</ol>
+<h3 id="SSH-Key的创建与配置"><a href="#SSH-Key的创建与配置" class="headerlink" title="SSH Key的创建与配置"></a>SSH Key的创建与配置</h3><ol>
+<li><p>打开命令行工具，输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;注册GitHub时所填写的邮箱&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p>然后一路回车，得到如下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Your public key has been saved in 路径/.ssh/id_rsa.pub.</div></pre></td></tr></table></figure>
+</li>
+<li><p>根据上方信息中的路径找到<code>id_rsa.pub</code> 文件，鼠标右键-&gt;“Edit with Notepad++”，打开并复制该文件中的全部内容（使用快捷键<code>Ctrl+A</code> -&gt; <code>Ctrl+C</code>，即可复制文件内所有内容），然后关闭。</p>
+</li>
+<li><p>为GitHub添加SSH Key。进入该网页：<a href="https://github.com/settings/keys" title="GitHub | Setting keys" target="_blank" rel="external">GitHub | Setting keys</a><br>点击右上角的绿色按钮“New SSH key”，填上任意“Title”，在“Key”文本框里粘贴上一步中复制的<code>id_rsa.pub</code>文件的内容，点击“Add SSH key”，在弹出页面中输入密码，完成。<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497867918.webp" alt="ssh验证" title="ssh验证"></p>
+</li>
+</ol>
+<p><br></p>
+<h2 id="Hexo的安装与基本命令"><a href="#Hexo的安装与基本命令" class="headerlink" title="Hexo的安装与基本命令"></a>Hexo的安装与基本命令</h2><hr>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;(该系列博文收录在本博客的“分类”—“博客”一栏中，如需查看该系列其他博文，请跳转至&lt;a href=&quot;https://scottyyc.github.io/categories/%E5%8D%9A%E5%AE%A2/&quot;&gt;“博客”&lt;/a&gt;分类。）  &lt;/p&gt;
+&lt;p&gt;  &amp;em
+    
+    </summary>
+    
+      <category term="博客" scheme="https://scottyyc.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo" scheme="https://scottyyc.github.io/tags/Hexo/"/>
+    
+      <category term="NexT" scheme="https://scottyyc.github.io/tags/NexT/"/>
+    
+      <category term="博客" scheme="https://scottyyc.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Hexo与GitHub搭建博客——（一）环境搭建</title>
