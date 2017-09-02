@@ -19,10 +19,10 @@
 <h2 id="配置GitHub"><a href="#配置GitHub" class="headerlink" title="配置GitHub"></a>配置GitHub</h2><hr>
 <h3 id="账号注册与项目创建"><a href="#账号注册与项目创建" class="headerlink" title="账号注册与项目创建"></a>账号注册与项目创建</h3><ol>
 <li>登入GitHub注册页面：<a href="https://github.com/join?source=header" title="GitHub | 注册" target="_blank" rel="external">GitHub | 注册</a></li>
-<li>填写注册信息：（1）第一个条形框内填入用户名，并记下你的用户名（建议只使用小写字母与数字的组合）；（2）第二个条形框内填入常用邮箱（会用于注册验证与之后的操作，请勿随意填写，尽量保证与上一篇中配置Git时的邮箱相同）；（3）第三个条形框内填写密码。<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497853328.webp" alt="GitHub注册1" title="GitHub注册1"></li>
-<li>全部填写完成后点击下方绿色按钮“Create an account”，跳转到如下页面：<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497853908.webp" alt="GitHub注册2" title="GitHub注册2"><br>&emsp;&emsp;直接点击绿色按钮“Continue”，并打开你注册时所填写的邮箱，在刚收到的 GitHub 邮件中点击“Verify email address”。<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497854437.webp" alt="GitHub邮件认证" title="GitHub邮件认证"></li>
-<li>跳转到如下页面，点击“Start a project”。<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497855333.webp" alt="GitHub页面" title="GitHub页面"></li>
-<li>转到如下页面：<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497856550.webp" alt="GitHub项目页面" title="GitHub项目页面"><br>&emsp;&emsp;在图中红框位置输入<code>username.github.io</code>（其中“username”请改成你注册时所填的用户名，例如：我的用户名是scottshufe，便在红框内填入<code>scottshufe.github.io</code>），然后点击下方绿色按钮“Create repository”。成功后跳转到如下页面：<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497857762.webp" alt="项目成功创建" title="项目成功创建"></li>
+<li>填写注册信息：（1）第一个条形框内填入用户名，并记下你的用户名（建议只使用小写字母与数字的组合）；（2）第二个条形框内填入常用邮箱（会用于注册验证与之后的操作，请勿随意填写，尽量保证与上一篇中配置Git时的邮箱相同）；（3）第三个条形框内填写密码。<br><br><img src="/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/register1.webp" alt="GitHub注册1" title="GitHub注册1"></li>
+<li>全部填写完成后点击下方绿色按钮“Create an account”，跳转到如下页面：<br><br><img src="/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/register2.webp" alt="GitHub注册2" title="GitHub注册2"><br>&emsp;&emsp;直接点击绿色按钮“Continue”，并打开你注册时所填写的邮箱，在刚收到的 GitHub 邮件中点击“Verify email address”。<br><br><img src="/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/register3.webp" alt="GitHub邮件认证" title="GitHub邮件认证"></li>
+<li>跳转到如下页面，点击“Start a project”。<br><br><img src="/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/proj1.webp" alt="GitHub页面" title="GitHub页面"></li>
+<li>转到如下页面：<br><br><img src="/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/proj2.webp" alt="GitHub项目页面" title="GitHub项目页面"><br>&emsp;&emsp;在图中红框位置输入<code>username.github.io</code>（其中“username”请改成你注册时所填的用户名，例如：我的用户名是scottshufe，便在红框内填入<code>scottshufe.github.io</code>），然后点击下方绿色按钮“Create repository”。成功后跳转到如下页面：<br><br><img src="/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/proj3.webp" alt="项目成功创建" title="项目成功创建"></li>
 </ol>
 <h3 id="SSH-Key的创建与配置"><a href="#SSH-Key的创建与配置" class="headerlink" title="SSH Key的创建与配置"></a>SSH Key的创建与配置</h3><ol>
 <li><p>打开命令行工具，输入：</p>
@@ -33,12 +33,26 @@
 </li>
 <li><p>根据上方信息中的路径找到<code>id_rsa.pub</code> 文件，鼠标右键-&gt;“Edit with Notepad++”，打开并复制该文件中的全部内容（使用快捷键<code>Ctrl+A</code> -&gt; <code>Ctrl+C</code>，即可复制文件内所有内容），然后关闭。</p>
 </li>
-<li><p>为GitHub添加SSH Key。进入该网页：<a href="https://github.com/settings/keys" title="GitHub | Setting keys" target="_blank" rel="external">GitHub | Setting keys</a><br>点击右上角的绿色按钮“New SSH key”，填上任意“Title”，在“Key”文本框里粘贴上一步中复制的<code>id_rsa.pub</code>文件的内容，点击“Add SSH key”，在弹出页面中输入密码，完成。<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497867918.webp" alt="ssh验证" title="ssh验证"></p>
+<li><p>为GitHub添加SSH Key。进入该网页：<a href="https://github.com/settings/keys" title="GitHub | Setting keys" target="_blank" rel="external">GitHub | Setting keys</a><br>点击右上角的绿色按钮“New SSH key”，填上任意“Title”，在“Key”文本框里粘贴上一步中复制的<code>id_rsa.pub</code>文件的内容，点击“Add SSH key”，在弹出页面中输入密码，完成。<br><br><img src="/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/ssh.webp" alt="ssh验证" title="ssh验证"></p>
 </li>
 </ol>
 <p><br></p>
 <h2 id="Hexo的安装与基本命令"><a href="#Hexo的安装与基本命令" class="headerlink" title="Hexo的安装与基本命令"></a>Hexo的安装与基本命令</h2><hr>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3>]]></content>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>打开命令行工具，输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure></p>
+<p>等待一段时间即可。</p>
+<h3 id="基本Hexo命令与建站"><a href="#基本Hexo命令与建站" class="headerlink" title="基本Hexo命令与建站"></a>基本Hexo命令与建站</h3><h4 id="新建项目——hexo-init命令"><a href="#新建项目——hexo-init命令" class="headerlink" title="新建项目——hexo init命令"></a>新建项目——<code>hexo init</code>命令</h4><p>打开“我的电脑”，进入到你想放置项目的位置，然后按住键盘上的<code>Shift</code>键并在空白处点击鼠标右键，选择“在此处打开命令窗口”，在打开的命令行工具中输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init blog</div></pre></td></tr></table></figure></p>
+<p>等待一段时间，待得命令行中显示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INFO Start blogging with Hexo!</div></pre></td></tr></table></figure></p>
+<p>说明项目已创建成功，这时我们的博客雏形已经生成了。<br>此时继续在命令行中输入以下命令，安装一些依赖的包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd blog</div><div class="line">npm install</div></pre></td></tr></table></figure></p>
+<h4 id="生成文件——hexo-generate命令"><a href="#生成文件——hexo-generate命令" class="headerlink" title="生成文件——hexo generate命令"></a>生成文件——hexo generate命令</h4><p>进入到我们刚刚使用<code>hexo init</code>命令新建的“blog”项目文件夹下，按住<code>Shift</code>键+鼠标右键-&gt;“在此处打开命令窗口”，在打开的命令行窗口中输入以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure></p>
+<p>该命令会根据我们的配置文件生成相应的项目文件。当命令行中显示如下图，说明命令已执行完成。<br><br><img src="/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/hexo_g.JPG" alt="hexo generate" title="hexo generate"></p>
+<h4 id="启动本地服务——hexo-service命令"><a href="#启动本地服务——hexo-service命令" class="headerlink" title="启动本地服务——hexo service命令"></a>启动本地服务——hexo service命令</h4><p>在“blog”项目文件夹下打开命令行工具，输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure></p>
+<p>当命令行中显示如下时，说明本地服务已启动：<br><br><img src="/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/hexo_s.JPG" alt="hexo server" title="hexo server"></p>
+<h4 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h4><p>在启动服务后打开浏览器，并在地址栏内输入<code>localhost:4000</code>，即可看到我们创建的博客雏形：<br><br><img src="/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/hexo.webp" alt="Hexo博客一代目" title="Hexo博客一代目"></p>
+<blockquote>
+<p>注：如果在浏览器地址栏输入<code>localhost:4000</code>却发现无法访问时，说明4000端口已被占用（似乎是与福昕阅读器发生了冲突），此时我们需要更换端口启动服务，只需将上面的命令更改成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server -p 5000</div></pre></td></tr></table></figure></p>
+<p>然后在浏览器地址栏中输入<code>localhost:5000</code>进行访问即可。</p>
+</blockquote>
+<h4 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h4>]]></content>
       
         <categories>
             
@@ -84,19 +98,19 @@
 <p>&emsp;&emsp;有的朋友看到要安装这么多软件立马头就大了，立即推：放弃搭建博客（借用一下宇哥的梗hhh）。其实Notepad++也并非必需，但是为了接下来的工作中查阅修改配置文档更加方便，这里还是将其写为了必须安装。</p>
 <h3 id="Node-js的下载与安装"><a href="#Node-js的下载与安装" class="headerlink" title="Node.js的下载与安装"></a>Node.js的下载与安装</h3><ol>
 <li>第一步，进入Node.js的下载页面：<a href="https://nodejs.org/en/download/" title="Download|Node.js" target="_blank" rel="external">Download|Node.js</a></li>
-<li>第二步，选择与你个人计算机系统相符的版本进行下载，如：我是Windows 10，64 位操作系统的即选择<code>Windows Installer(.msi) — 64-bit</code>，如图中红圈处所示。若是32位操作系统请选择32-bit。<a href="http://jingyan.baidu.com/article/09ea3edec9caa4c0aede392e.html" title="（怎么看自己电脑是32位还是64位？）" target="_blank" rel="external">（怎么看自己电脑是32位还是64位？）</a><br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497758714.webp" alt="Node.js下载页面" title="Node.js下载页面"></li>
-<li>说明：（1）<code>Windows Installer</code> 指的是安装版的软件包，<code>Windows Binary</code> 指的是解压版的软件包，这里我们选择安装版的即可；（2）如果在下载过程中遇到下载速度极慢的问题，请在下图中的位置点击鼠标右键，选择复制链接地址，然后打开迅雷，新建任务，将复制的链接粘贴到其中即可。<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497760307.webp" alt="Nodejs2" title="Nodejs下载速度过慢"></li>
+<li>第二步，选择与你个人计算机系统相符的版本进行下载，如：我是Windows 10，64 位操作系统的即选择<code>Windows Installer(.msi) — 64-bit</code>，如图中红圈处所示。若是32位操作系统请选择32-bit。<a href="http://jingyan.baidu.com/article/09ea3edec9caa4c0aede392e.html" title="（怎么看自己电脑是32位还是64位？）" target="_blank" rel="external">（怎么看自己电脑是32位还是64位？）</a><br><br><img src="/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/node1.webp" alt="Node.js下载页面" title="Node.js下载页面"></li>
+<li>说明：（1）<code>Windows Installer</code> 指的是安装版的软件包，<code>Windows Binary</code> 指的是解压版的软件包，这里我们选择安装版的即可；（2）如果在下载过程中遇到下载速度极慢的问题，请在下图中的位置点击鼠标右键，选择复制链接地址，然后打开迅雷，新建任务，将复制的链接粘贴到其中即可。<br><br><img src="/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/node2.webp" alt="Nodejs2" title="Nodejs下载速度过慢"></li>
 <li>安装。这一步没什么好说的，双击打开下载好的安装包，一路<code>Next</code>点过去就行了。</li>
 </ol>
 <h3 id="Git的下载与安装"><a href="#Git的下载与安装" class="headerlink" title="Git的下载与安装"></a>Git的下载与安装</h3><ol>
-<li><p>进入Git下载页面：<a href="https://git-scm.com/download/win" title="Git - Downloading Package" target="_blank" rel="external">Git - Downloading Package</a><br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497765687.webp" alt="Git下载页面" title="Git下载页面"></p>
+<li><p>进入Git下载页面：<a href="https://git-scm.com/download/win" title="Git - Downloading Package" target="_blank" rel="external">Git - Downloading Package</a><br><br><img src="/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/git1.webp" alt="Git下载页面" title="Git下载页面"></p>
 </li>
 <li><p>选择相应的版本进行下载。如果下载速度慢，在相应版本链接处点击鼠标右键，复制链接地址，进入迅雷新建任务进行下载。</p>
 </li>
 <li>双击打开安装包进行安装。安装完成后，在开始菜单里找到“Git”-&gt;“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功。</li>
 <li><p>在打开的 Git Bash 界面中输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;Your Name&quot;</div><div class="line">git config --global user.email &quot;email@example.com&quot;</div></pre></td></tr></table></figure>
-<p>其中的<code>Your Name</code>与<code>email@example.com</code>请分别替换成你想用的用户名与常用邮箱。设置完成后关闭窗口即可。<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497766223.webp" alt="Git Bash界面" title="Git Bash界面"></p>
+<p>其中的<code>Your Name</code>与<code>email@example.com</code>请分别替换成你想用的用户名与常用邮箱。设置完成后关闭窗口即可。<br><br><img src="/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/git2.webp" alt="Git Bash界面" title="Git Bash界面"></p>
 </li>
 </ol>
 <h3 id="Notepad-的下载与安装"><a href="#Notepad-的下载与安装" class="headerlink" title="Notepad++的下载与安装"></a>Notepad++的下载与安装</h3><ol>
@@ -105,20 +119,20 @@
 </ol>
 <p><br></p>
 <h2 id="命令行与软件环境配置"><a href="#命令行与软件环境配置" class="headerlink" title="命令行与软件环境配置"></a>命令行与软件环境配置</h2><hr>
-<h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>&emsp;&emsp;同时按住键盘的<code>win</code>键与<code>R</code>键，打开“运行”命令框。然后输入<code>cmd</code>，点击“确定”打开命令行（命令提示符），也就是我们平时所说的“黑框框”。<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497768220.webp" alt="win+R打开运行框" title="win+R打开运行框"><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497768443.webp" alt="cmd命令提示符" title="cmd命令提示符"></p>
+<h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>&emsp;&emsp;同时按住键盘的<code>win</code>键与<code>R</code>键，打开“运行”命令框。然后输入<code>cmd</code>，点击“确定”打开命令行（命令提示符），也就是我们平时所说的“黑框框”。<br><br><img src="/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/cmd1.webp" alt="win+R打开运行框" title="win+R打开运行框"><br><img src="/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/cmd2.webp" alt="cmd命令提示符" title="cmd命令提示符"></p>
 <h3 id="软件环境配置"><a href="#软件环境配置" class="headerlink" title="软件环境配置"></a>软件环境配置</h3><h4 id="Node-js环境变量设置"><a href="#Node-js环境变量设置" class="headerlink" title="Node.js环境变量设置"></a>Node.js环境变量设置</h4><p>&emsp;&emsp;<code>win + R</code>键并输入<code>cmd</code>，点击“确定”打开命令行工具，输入<code>npm</code>，并按“回车”键，如果命令行中显示类似如下结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">Usage: npm &lt;command&gt;</div><div class="line"></div><div class="line">where &lt;command&gt; is one of:</div><div class="line">    access, adduser, bin, bugs, c, cache, completion, config,</div><div class="line">    ddp, dedupe, deprecate, dist-tag, docs, edit, explore, get,</div><div class="line">    help, help-search, i, init, install, install-test, it, link,</div><div class="line">    list, ln, login, logout, ls, outdated, owner, pack, ping,</div><div class="line">    prefix, prune, publish, rb, rebuild, repo, restart, root,</div><div class="line">    run, run-script, s, se, search, set, shrinkwrap, star,</div><div class="line">    stars, start, stop, t, tag, team, test, tst, un, uninstall,</div><div class="line">    unpublish, unstar, up, update, v, version, view, whoami</div><div class="line"></div><div class="line">npm &lt;cmd&gt; -h     quick help on &lt;cmd&gt;</div><div class="line">npm -l           display full usage info</div><div class="line">npm help &lt;term&gt;  search for help on &lt;term&gt;</div><div class="line">npm help npm     involved overview</div><div class="line"></div><div class="line">Specify configs in the ini-formatted file:</div><div class="line">    C:\Users\lenovo\.npmrc</div><div class="line">or on the command line via: npm &lt;command&gt; --key value</div><div class="line">Config info can be viewed via: npm help config</div><div class="line"></div><div class="line">npm@3.10.10 C:\Program Files\nodejs\node_modules\npm</div></pre></td></tr></table></figure></p>
 <p>说明Node.js环境变量已配置好，无需再调整，可跳过下面这一步。</p>
 <p>如果命令行中显示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;npm&apos; 不是内部或外部命令，也不是可运行的程序</div><div class="line">或批处理文件。</div></pre></td></tr></table></figure></p>
 <p>请做如下操作：</p>
 <ul>
-<li>在你的计算机中找到Node.js的安装路径并复制，如下图：<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497770439.webp" alt="Nodejs环境变量设置1" title="Nodejs环境变量设置1"></li>
-<li>在桌面使用鼠标右键点击“我的电脑”-&gt;“属性”-&gt;“高级系统设置”：<br><br><img src="https://img1.doubanio.com/view/photo/l/public/p2497770887.webp" alt="Nodejs环境变量设置2" title="Nodejs环境变量设置2"></li>
-<li>点击“环境变量”-&gt; 找到系统变量中的<code>Path</code>字段 -&gt; 点击“编辑”：<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497771615.webp" alt="Nodejs环境变量设置3" title="Nodejs环境变量设置3"></li>
-<li>将之前复制的Node.js的安装路径粘贴到“变量值”最后，点击“确定”：<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497772103.webp" alt="Nodejs环境变量设置4" title="Nodejs环境变量设置4"></li>
+<li>在你的计算机中找到Node.js的安装路径并复制，如下图：<br><br><img src="/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/env1.webp" alt="Nodejs环境变量设置1" title="Nodejs环境变量设置1"></li>
+<li>在桌面使用鼠标右键点击“我的电脑”-&gt;“属性”-&gt;“高级系统设置”：<br><br><img src="/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/env2.webp" alt="Nodejs环境变量设置2" title="Nodejs环境变量设置2"></li>
+<li>点击“环境变量”-&gt; 找到系统变量中的<code>Path</code>字段 -&gt; 点击“编辑”：<br><br><img src="/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/env3.webp" alt="Nodejs环境变量设置3" title="Nodejs环境变量设置3"></li>
+<li>将之前复制的Node.js的安装路径粘贴到“变量值”最后，点击“确定”：<br><br><img src="/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/env4.webp" alt="Nodejs环境变量设置4" title="Nodejs环境变量设置4"></li>
 </ul>
 <p>至此Node.js环境变量配置完成，再次打开命令行工具，输入<code>npm</code>，可看到：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Usage: npm &lt;command&gt;</div><div class="line"></div><div class="line">where &lt;command&gt; is one of:</div><div class="line">.......（下方内容省略）</div></pre></td></tr></table></figure>
-<h4 id="Node-js配置之npm淘宝镜像源设置"><a href="#Node-js配置之npm淘宝镜像源设置" class="headerlink" title="Node.js配置之npm淘宝镜像源设置"></a>Node.js配置之npm淘宝镜像源设置</h4><p>&emsp;&emsp;简单解释一下这步操作的意义：Node.js默认配置使用的是国外的源，在使用<code>npm</code>命令安装相关的库时速度会比较慢，配置国内镜像能够提升库的安装速度。（还是那句话，如果不理解，请跟着做就行了。）<br>操作步骤：<code>win + R</code>输入<code>cmd</code>，点击“确定”打开命令行工具 -&gt; 输入<code>npm config set registry https://registry.npm.taobao.org</code>，按回车即可：<br><br><img src="https://img3.doubanio.com/view/photo/l/public/p2497773786.webp" alt="npm淘宝镜像源设置" title="npm淘宝镜像源设置"></p>
+<h4 id="Node-js配置之npm淘宝镜像源设置"><a href="#Node-js配置之npm淘宝镜像源设置" class="headerlink" title="Node.js配置之npm淘宝镜像源设置"></a>Node.js配置之npm淘宝镜像源设置</h4><p>&emsp;&emsp;简单解释一下这步操作的意义：Node.js默认配置使用的是国外的源，在使用<code>npm</code>命令安装相关的库时速度会比较慢，配置国内镜像能够提升库的安装速度。（还是那句话，如果不理解，请跟着做就行了。）<br>操作步骤：<code>win + R</code>输入<code>cmd</code>，点击“确定”打开命令行工具 -&gt; 输入<code>npm config set registry https://registry.npm.taobao.org</code>，按回车即可：<br><br><img src="/2017/08/30/使用Hexo与GitHub搭建博客——（一）环境搭建/taobao.webp" alt="npm淘宝镜像源设置" title="npm淘宝镜像源设置"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr>
 <p>&emsp;&emsp;操作完以上的步骤，相关软件的安装和配置基本上就可以说是完成了，是不是很简单呢？（现场的同学们都说是，屏幕前的同学们，你们呢！）<br>&emsp;&emsp;下一篇文章将会介绍GitHub的相关配置、Hexo框架的安装以及Hexo的基本命令，经过下一篇的学习，朋友们就可以首次看到属于自己的博客了（个人博客一代目），敬请期待吧~</p>
 ]]></content>
