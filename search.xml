@@ -52,7 +52,16 @@
 <p>注：如果在浏览器地址栏输入<code>localhost:4000</code>却发现无法访问时，说明4000端口已被占用（似乎是与福昕阅读器发生了冲突），此时我们需要更换端口启动服务，只需将上面的命令更改成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server -p 5000</div></pre></td></tr></table></figure></p>
 <p>然后在浏览器地址栏中输入<code>localhost:5000</code>进行访问即可。</p>
 </blockquote>
-<h4 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h4>]]></content>
+<h4 id="部署到GitHub—hexo-deploy命令"><a href="#部署到GitHub—hexo-deploy命令" class="headerlink" title="部署到GitHub—hexo deploy命令"></a>部署到GitHub—hexo deploy命令</h4><p>到目前为止，虽然我们的博客已经生成了，但是还没有部署到网络上去，只能在本地查看。我们只需要在项目文件夹中打开命令行，并输入以下命令就可将项目部署到GitHub上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
+<p>等候一段时间，当命令行中显示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INFO Deploy done: git</div></pre></td></tr></table></figure></p>
+<p>就说明部署工作已经完成了。<br>这时，你只需要在浏览器地址栏内输入：<code>https://username.github.io</code>，无论你身在何处，使用什么工具都可以访问你的博客了（注意，其中的”username”即为你注册GitHub时的用户名）。<br><br></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr>
+<p>&emsp;&emsp;本篇文章详细介绍了如何配置GitHub、安装Hexo框架及Hexo基本命令的使用，在经过此篇文章的一系列操作后，我们已经搭建起了一个属于自己的博客。<br>&emsp;&emsp;猜一下→_→，是不是有朋友在默默吐槽：“哎折腾了老半天弄出个啥玩意儿啊，跟你的博客完全不一样嘛。”这是因为我们的博客目前使用的是Hexo的默认主题，相比之下可能样式不那么好看。<br>&emsp;&emsp;从下一篇文章开始，我将为大家介绍如何更换NexT主题，以及如何修改NexT主题配置文件从而让自己的博客外观更加好看、拥有更多的扩展功能。<br>文末再提一下本文所涉及的Hexo的各个基本命令：</p>
+<blockquote>
+<p>建站命令：<code>hexo init blog</code>（blog可以修改成你希望的项目名称）<br>生成文件：<code>hexo generate</code>  也可使用简化版的<code>hexo g</code>替代<br>启动服务：<code>hexo server</code>或<code>hexo s</code><br>部署到网络上：<code>hexo deploy</code>或<code>hexo d</code></p>
+</blockquote>
+<p>希望大家能熟练掌握以上基本命令，如果想了解更多有关Hexo的知识，请查看Hexo官方文档：<a href="https://hexo.io/zh-cn/docs/" title="文档 | Hexo" target="_blank" rel="external">文档 | Hexo</a></p>
+]]></content>
       
         <categories>
             
