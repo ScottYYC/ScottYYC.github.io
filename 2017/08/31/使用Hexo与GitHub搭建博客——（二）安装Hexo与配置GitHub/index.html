@@ -114,7 +114,7 @@
 <meta property="og:image" content="https://scottyyc.github.io/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/hexo_g.JPG">
 <meta property="og:image" content="https://scottyyc.github.io/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/hexo_s.JPG">
 <meta property="og:image" content="https://scottyyc.github.io/2017/08/31/使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub/hexo.webp">
-<meta property="og:updated_time" content="2017-09-03T15:57:39.327Z">
+<meta property="og:updated_time" content="2017-09-04T03:57:09.858Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo与GitHub搭建博客——（二）安装Hexo与配置GitHub">
 <meta name="twitter:description" content="(该系列博文收录在本博客的“分类”—“博客”一栏中，如需查看该系列其他博文，请跳转至“博客”分类。）     &amp;emsp;&amp;emsp;   前言 前一篇文章介绍了相关软件的安装（Node.js，Git与Notepad++），也对软件的配置进行了说明。本篇文章是在做好前一篇文章相关准备的基础上进行的，如果还未做好相关准备，请查阅前一篇文章。 阅读完此篇文章后你应该做好以下工作：  配置好GitHub">
@@ -489,7 +489,7 @@
 <h2 id="Hexo的安装与基本命令"><a href="#Hexo的安装与基本命令" class="headerlink" title="Hexo的安装与基本命令"></a>Hexo的安装与基本命令</h2><hr>
 <h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>打开命令行工具，输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure></p>
 <p>等待一段时间即可。</p>
-<h3 id="基本Hexo命令与建站"><a href="#基本Hexo命令与建站" class="headerlink" title="基本Hexo命令与建站"></a>基本Hexo命令与建站</h3><h4 id="新建项目——hexo-init命令"><a href="#新建项目——hexo-init命令" class="headerlink" title="新建项目——hexo init命令"></a>新建项目——<code>hexo init</code>命令</h4><p>打开“我的电脑”，进入到你想放置项目的位置，然后按住键盘上的<code>Shift</code>键并在空白处点击鼠标右键，选择“在此处打开命令窗口”，在打开的命令行工具中输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init blog</div></pre></td></tr></table></figure></p>
+<h3 id="基本Hexo命令与建站"><a href="#基本Hexo命令与建站" class="headerlink" title="基本Hexo命令与建站"></a>基本Hexo命令与建站</h3><h4 id="新建项目——hexo-init命令"><a href="#新建项目——hexo-init命令" class="headerlink" title="新建项目——hexo init命令"></a>新建项目——hexo init命令</h4><p>打开“我的电脑”，进入到你想放置项目的位置，然后按住键盘上的<code>Shift</code>键并在空白处点击鼠标右键，选择“在此处打开命令窗口”，在打开的命令行工具中输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init blog</div></pre></td></tr></table></figure></p>
 <p>等待一段时间，待得命令行中显示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INFO Start blogging with Hexo!</div></pre></td></tr></table></figure></p>
 <p>说明项目已创建成功，这时我们的博客雏形已经生成了。<br>此时继续在命令行中输入以下命令，安装一些依赖的包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd blog</div><div class="line">npm install</div></pre></td></tr></table></figure></p>
 <h4 id="生成文件——hexo-generate命令"><a href="#生成文件——hexo-generate命令" class="headerlink" title="生成文件——hexo generate命令"></a>生成文件——hexo generate命令</h4><p>进入到我们刚刚使用<code>hexo init</code>命令新建的“blog”项目文件夹下，按住<code>Shift</code>键+鼠标右键-&gt;“在此处打开命令窗口”，在打开的命令行窗口中输入以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure></p>
@@ -501,11 +501,11 @@
 <p>注：如果在浏览器地址栏输入<code>localhost:4000</code>却发现无法访问时，说明4000端口已被占用（似乎是与福昕阅读器发生了冲突），此时我们需要更换端口启动服务，只需将上面的命令更改成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server -p 5000</div></pre></td></tr></table></figure></p>
 <p>然后在浏览器地址栏中输入<code>localhost:5000</code>进行访问即可。</p>
 </blockquote>
-<h4 id="部署到GitHub—hexo-deploy命令"><a href="#部署到GitHub—hexo-deploy命令" class="headerlink" title="部署到GitHub—hexo deploy命令"></a>部署到GitHub—hexo deploy命令</h4><p>到目前为止，虽然我们的博客已经生成了，但是还没有部署到网络上去，只能在本地查看。我们只需要在项目文件夹中打开命令行，并输入以下命令就可将项目部署到GitHub上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
+<h4 id="部署到GitHub—hexo-deploy命令"><a href="#部署到GitHub—hexo-deploy命令" class="headerlink" title="部署到GitHub—hexo deploy命令"></a>部署到GitHub—hexo deploy命令</h4><p>到目前为止，虽然我们的博客已经生成了，但是还没有部署到网络上去，只能在本地查看。我们只需要在项目文件夹下打开命令行，并输入以下命令就可将项目部署到GitHub上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
 <p>等候一段时间，当命令行中显示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INFO Deploy done: git</div></pre></td></tr></table></figure></p>
 <p>就说明部署工作已经完成了。<br>这时，你只需要在浏览器地址栏内输入：<code>https://username.github.io</code>，无论你身在何处，使用什么工具都可以访问你的博客了（注意，其中的”username”即为你注册GitHub时的用户名）。<br><br></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr>
-<p>&emsp;&emsp;本篇文章详细介绍了如何配置GitHub、安装Hexo框架及Hexo基本命令的使用，在经过此篇文章的一系列操作后，我们已经搭建起了一个属于自己的博客。<br>&emsp;&emsp;猜一下→_→，是不是有朋友在默默吐槽：“哎折腾了老半天弄出个啥玩意儿啊，跟你的博客完全不一样嘛。”这是因为我们的博客目前使用的是Hexo的默认主题，相比之下可能样式不那么好看。<br>&emsp;&emsp;从下一篇文章开始，我将为大家介绍如何更换NexT主题，以及如何修改NexT主题配置文件从而让自己的博客外观更加好看、拥有更多的扩展功能。<br>文末再提一下本文所涉及的Hexo的各个基本命令：</p>
+<p>&emsp;&emsp;本篇文章详细介绍了如何配置GitHub、安装Hexo框架及Hexo基本命令的使用，在经过此篇文章的一系列操作后，我们已经搭建起了一个属于自己的博客。<br>&emsp;&emsp;猜一下→_→，是不是有朋友在默默吐槽：“哎折腾了老半天弄出个啥玩意儿啊，跟你的博客完全不一样嘛。”这是因为我们的博客目前使用的是Hexo的默认主题，相比之下可能样式不那么好看。<br>&emsp;&emsp;从下一篇文章开始，我将为大家介绍如何更换NexT主题，以及如何修改NexT主题配置文件从而让自己的博客外观更加好看、拥有更多的扩展功能。<br>文末再提一下本文所涉及的Hexo的几个基本命令：</p>
 <blockquote>
 <p>建站命令：<code>hexo init blog</code>（blog可以修改成你希望的项目名称）<br>生成文件：<code>hexo generate</code>  也可使用简化版的<code>hexo g</code>替代<br>启动服务：<code>hexo server</code>或<code>hexo s</code><br>部署到网络上：<code>hexo deploy</code>或<code>hexo d</code></p>
 </blockquote>
@@ -595,6 +595,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/09/07/爬取全站妹子图——第一个scrapy爬虫/" rel="prev" title="爬取全站妹子图——第一个scrapy爬虫">
+                爬取全站妹子图——第一个scrapy爬虫 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -672,7 +676,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -683,7 +687,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -694,7 +698,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
