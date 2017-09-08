@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://scottyyc.github.io/"/>
-  <updated>2017-09-08T02:37:21.361Z</updated>
+  <updated>2017-09-08T15:02:53.310Z</updated>
   <id>https://scottyyc.github.io/</id>
   
   <author>
@@ -14,6 +14,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Hexo与GitHub搭建博客——（三）更换主题与NexT主题优化</title>
+    <link href="https://scottyyc.github.io/2017/09/08/%E4%BD%BF%E7%94%A8Hexo%E4%B8%8EGitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%EF%BC%88%E4%B8%89%EF%BC%89%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B8%8ENexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/"/>
+    <id>https://scottyyc.github.io/2017/09/08/使用Hexo与GitHub搭建博客——（三）更换主题与NexT主题优化/</id>
+    <published>2017-09-08T13:46:20.000Z</published>
+    <updated>2017-09-08T15:02:53.310Z</updated>
+    
+    <content type="html"><![CDATA[<p>(该系列博文收录在本博客的“分类”—“博客”一栏中，如需查看该系列其他博文，请跳转至<a href="https://scottyyc.github.io/categories/%E5%8D%9A%E5%AE%A2/">“博客”</a>分类。）  </p>
+<p>  &emsp;&emsp;  </p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
+<p>上一篇文章为大家介绍了如何配置GitHub、安装Hexo框架以及Hexo的几个基本命令。经过上篇文章的准备后，我们博客的雏形已经搭建成功了，若相关准备尚未完成，请自行翻看前面的文章。如果对前面介绍的Hexo命令还没完全掌握，请不用着急，因为这几个命令在之后博客的配置和使用中还会反复用到，到时我还会再次给大家讲述各个命令的作用。</p>
+<p>本篇文章将为大家介绍如何为自己的Hexo博客更换NexT主题以及对NexT主题进行优化配置，从而让我们的博客外观更加好看。本篇的主要内容将包括：</p>
+<ul>
+<li><strong>下载及启用NexT主题</strong></li>
+<li><strong>NexT主题美化</strong><ul>
+<li>选择你喜欢的主题框架（scheme）</li>
+<li>在侧边菜单栏中添加“标签”页面</li>
+<li>侧边菜单栏图标设置</li>
+<li>在侧边菜单栏中增加社交链接按钮</li>
+<li>开启背景特效</li>
+</ul>
+</li>
+<li><strong>博客功能扩展</strong><ul>
+<li>增加第三方服务“百度统计”</li>
+</ul>
+</li>
+</ul>
+<p>&emsp;&emsp;[注]：如果在阅读过程中发现文章有任何错误或遗漏，欢迎在文章下的评论区指正与补充٩(๑❛ᴗ❛๑)۶。</p>
+<blockquote>
+<p>前几天感冒了，而且学习任务比较重，没能抽出时间来写文章，因此上一篇跟这一篇中间隔了比较长的一段时间。还有就是经常在学习了一整天之后大晚上的挤出一点时间来写文章，有点影响状态，有些地方本来应该可以做得更好的然后因为懒或累就草草了事了。但还是会坚持把这一个系列写完的，然后再回过头来认真看有哪些需要修改的地方。这些话写在这就当记录一下心情吧~<br><br></p>
+<h2 id="NexT主题下载和启用"><a href="#NexT主题下载和启用" class="headerlink" title="NexT主题下载和启用"></a>NexT主题下载和启用</h2><hr>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;(该系列博文收录在本博客的“分类”—“博客”一栏中，如需查看该系列其他博文，请跳转至&lt;a href=&quot;https://scottyyc.github.io/categories/%E5%8D%9A%E5%AE%A2/&quot;&gt;“博客”&lt;/a&gt;分类。）  &lt;/p&gt;
+&lt;p&gt;  &amp;em
+    
+    </summary>
+    
+      <category term="博客" scheme="https://scottyyc.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo" scheme="https://scottyyc.github.io/tags/Hexo/"/>
+    
+      <category term="NexT" scheme="https://scottyyc.github.io/tags/NexT/"/>
+    
+      <category term="博客" scheme="https://scottyyc.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>小清新福利</title>
