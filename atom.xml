@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>ScottYYC&#39;s Blog</title>
-  <subtitle>Life is short.</subtitle>
+  <subtitle>Remember that you are dust, and to dust you shall return.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://scottyyc.github.io/"/>
-  <updated>2017-09-08T15:02:53.310Z</updated>
+  <updated>2017-09-24T02:29:32.217Z</updated>
   <id>https://scottyyc.github.io/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>两个有意思的Python彩蛋</title>
+    <link href="https://scottyyc.github.io/2017/09/24/%E4%B8%A4%E4%B8%AA%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84Python%E5%BD%A9%E8%9B%8B/"/>
+    <id>https://scottyyc.github.io/2017/09/24/两个有意思的Python彩蛋/</id>
+    <published>2017-09-24T02:19:58.000Z</published>
+    <updated>2017-09-24T02:29:32.217Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Zen-of-Python-Python之禅"><a href="#Zen-of-Python-Python之禅" class="headerlink" title="Zen of Python - Python之禅"></a>Zen of Python - Python之禅</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> this</div><div class="line">The Zen of Python, by Tim Peters</div><div class="line"></div><div class="line">Beautiful <span class="keyword">is</span> better than ugly.</div><div class="line">Explicit <span class="keyword">is</span> better than implicit.</div><div class="line">Simple <span class="keyword">is</span> better than complex.</div><div class="line">Complex <span class="keyword">is</span> better than complicated.</div><div class="line">Flat <span class="keyword">is</span> better than nested.</div><div class="line">Sparse <span class="keyword">is</span> better than dense.</div><div class="line">Readability counts.</div><div class="line">Special cases aren<span class="string">'t special enough to break the rules.</span></div><div class="line"><span class="string">Although practicality beats purity.</span></div><div class="line"><span class="string">Errors should never pass silently.</span></div><div class="line"><span class="string">Unless explicitly silenced.</span></div><div class="line"><span class="string">In the face of ambiguity, refuse the temptation to guess.</span></div><div class="line"><span class="string">There should be one-- and preferably only one --obvious way to do it.</span></div><div class="line"><span class="string">Although that way may not be obvious at first unless you'</span>re Dutch.</div><div class="line">Now <span class="keyword">is</span> better than never.</div><div class="line">Although never <span class="keyword">is</span> often better than *right* now.</div><div class="line">If the implementation <span class="keyword">is</span> hard to explain, it<span class="string">'s a bad idea.</span></div><div class="line"><span class="string">If the implementation is easy to explain, it may be a good idea.</span></div><div class="line"><span class="string">Namespaces are one honking great idea -- let'</span>s do more of those!</div></pre></td></tr></table></figure>
+<h1 id="学了Python你就能上天了"><a href="#学了Python你就能上天了" class="headerlink" title="学了Python你就能上天了"></a>学了Python你就能上天了</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt;<span class="keyword">import</span> antigrativity</div></pre></td></tr></table></figure>
+<p><img src="/2017/09/24/两个有意思的Python彩蛋/antigrativity.JPG" alt="Antigrativity" title="学了Python能上天"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Zen-of-Python-Python之禅&quot;&gt;&lt;a href=&quot;#Zen-of-Python-Python之禅&quot; class=&quot;headerlink&quot; title=&quot;Zen of Python - Python之禅&quot;&gt;&lt;/a&gt;Zen of Python - Py
+    
+    </summary>
+    
+      <category term="Python" scheme="https://scottyyc.github.io/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="https://scottyyc.github.io/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Hexo与GitHub搭建博客——（三）更换主题与NexT主题优化</title>

@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title><![CDATA[两个有意思的Python彩蛋]]></title>
+      <url>/2017/09/24/%E4%B8%A4%E4%B8%AA%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84Python%E5%BD%A9%E8%9B%8B/</url>
+      <content type="html"><![CDATA[<h1 id="Zen-of-Python-Python之禅"><a href="#Zen-of-Python-Python之禅" class="headerlink" title="Zen of Python - Python之禅"></a>Zen of Python - Python之禅</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> this</div><div class="line">The Zen of Python, by Tim Peters</div><div class="line"></div><div class="line">Beautiful <span class="keyword">is</span> better than ugly.</div><div class="line">Explicit <span class="keyword">is</span> better than implicit.</div><div class="line">Simple <span class="keyword">is</span> better than complex.</div><div class="line">Complex <span class="keyword">is</span> better than complicated.</div><div class="line">Flat <span class="keyword">is</span> better than nested.</div><div class="line">Sparse <span class="keyword">is</span> better than dense.</div><div class="line">Readability counts.</div><div class="line">Special cases aren<span class="string">'t special enough to break the rules.</span></div><div class="line"><span class="string">Although practicality beats purity.</span></div><div class="line"><span class="string">Errors should never pass silently.</span></div><div class="line"><span class="string">Unless explicitly silenced.</span></div><div class="line"><span class="string">In the face of ambiguity, refuse the temptation to guess.</span></div><div class="line"><span class="string">There should be one-- and preferably only one --obvious way to do it.</span></div><div class="line"><span class="string">Although that way may not be obvious at first unless you'</span>re Dutch.</div><div class="line">Now <span class="keyword">is</span> better than never.</div><div class="line">Although never <span class="keyword">is</span> often better than *right* now.</div><div class="line">If the implementation <span class="keyword">is</span> hard to explain, it<span class="string">'s a bad idea.</span></div><div class="line"><span class="string">If the implementation is easy to explain, it may be a good idea.</span></div><div class="line"><span class="string">Namespaces are one honking great idea -- let'</span>s do more of those!</div></pre></td></tr></table></figure>
+<h1 id="学了Python你就能上天了"><a href="#学了Python你就能上天了" class="headerlink" title="学了Python你就能上天了"></a>学了Python你就能上天了</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt;<span class="keyword">import</span> antigrativity</div></pre></td></tr></table></figure>
+<p><img src="/2017/09/24/两个有意思的Python彩蛋/antigrativity.JPG" alt="Antigrativity" title="学了Python能上天"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[使用Hexo与GitHub搭建博客——（三）更换主题与NexT主题优化]]></title>
       <url>/2017/09/08/%E4%BD%BF%E7%94%A8Hexo%E4%B8%8EGitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%EF%BC%88%E4%B8%89%EF%BC%89%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B8%8ENexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
       <content type="html"><![CDATA[<p>(该系列博文收录在本博客的“分类”—“博客”一栏中，如需查看该系列其他博文，请跳转至<a href="https://scottyyc.github.io/categories/%E5%8D%9A%E5%AE%A2/">“博客”</a>分类。）  </p>
